@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<script src="../lib/alacarte.js"></script>
+<script>
+
+var alacarte = new Alacarte({
+  header: 'Alacarte Demo'
+});
+
+alacarte.setHeader('Alacarte Demo')
+.setInfo('Info...<br>More info...')
+.addCheckbox('Checkbox 1', true, function(state){
+  console.log(state);
+}).addCheckbox('Checkbox 1', false, function(state){
+  console.log(state);
+}).addItem('Item 1', function(){
+  console.log(1);
+}).addItem('Item 2', function(){
+  console.log(2);
+}).addItem('Item 3', function(){
+  console.log(3);
+});
+
+alacarte.show();
+
+//Navigate
+function key(code){
+  switch(code) {
+  case 38: // UP
+    alacarte.up();
+    break;
+  case 40: // DOWN
+    alacarte.down();
+    break;
+  case 13: // ENTER
+    alacarte.enter();
+    break;
+  case 32: // Space
+    alacarte.enter();
+    break;
+  case 27: // Esc
+    alacarte.hide();
+    break;
+  }
+}
+
+document.addEventListener('keydown', function(evt) {
+  key(evt.keyCode);
+});
+
+</script>
+</body>
+</html>
+

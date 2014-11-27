@@ -1,0 +1,19 @@
+{
+  "name": "alacarte",
+  "version": "0.0.0",
+  "description": "Simple menu for different devices",
+  "main": "lib/nsstorage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OptimalBits/alacarte.git"
+  },
+  "author": "Aron Kornhall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OptimalBits/alacarte/issues"
+  },
+  "homepage": "https://github.com/OptimalBits/alacarte"
+}
