@@ -1,8 +1,8 @@
 {
   "name": "alacarte",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple menu for different devices",
-  "main": "lib/nsstorage.js",
+  "main": "lib/alacarte.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
