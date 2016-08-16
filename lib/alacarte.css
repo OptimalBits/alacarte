@@ -35,7 +35,7 @@
   border-top: 1px solid #aaa;
 }
 
-.alacarte .menu li.selected {
+.alacarte .menu li.selected div {
   background: -webkit-linear-gradient(hsl(217, 96%, 71%), hsl(217, 96%, 43%));
   box-shadow: white 0px 0px 6px;
 }
@@ -63,4 +63,16 @@
   position: absolute;
   top: -5px;
   left: 0px;
+}  
+
+.alacarte .menu li table {  
+  font-size: 20px;
+}  
+
+.alacarte .menu li table td.key {  
+  white-space: nowrap;
+}  
+
+.alacarte .menu .hidden {  
+  display: none;
 }  
