@@ -14,22 +14,115 @@ var alacarte = new Alacarte({
 
 alacarte.setHeader('Alacarte Demo')
 .setInfo('Info...<br>More info...')
-.addCheckbox('Checkbox 1', true, function(state){
-  console.log(state);
-}).addCheckbox('Checkbox 1', false, function(state){
-  console.log(state);
-}).addItem('Item 1', function(){
-  console.log(1);
-}).addItem('Item 2', function(){
-  console.log(2);
-}).addItem('Item 3', function(){
-  console.log(3);
-}).addInfoPaneItem('Pane', {
-  'Item 1': 'str',
-  'Item 222': 1,
-  'Item 3': true,
-  'Item 44': 'Flygande bäckasiner söka hwila på mjuka tuvor qxz0123456789'
-});
+.setItems([
+  {
+    type: 'CHECKBOX',
+    title: 'Checkbox 1',
+    cb: function(state){
+      console.log('Checkbox 1: '+state);
+    }
+  },
+  {
+    type: 'ITEM',
+    title: 'Item 1',
+    cb: function(){
+      console.log('Item 1 cb');
+    }
+  },
+  {
+    type: 'EXPAND',
+    title: 'Expand 1',
+    cb: function(state){
+      console.log('Expand 1: '+state);
+    },
+    items: [
+      {
+        type: 'CHECKBOX',
+        title: 'Checkbox 2',
+        cb: function(state){
+          console.log('Checkbox 2: '+state);
+        }
+      },
+      {
+        type: 'ITEM',
+        title: 'Item 2',
+        cb: function(){
+          console.log('Item 2 cb');
+        }
+      },
+      {
+        type: 'EXPAND',
+        title: 'Expand 2',
+        cb: function(state){
+          console.log('Expand 2: '+state);
+        },
+        items: [
+          {
+            type: 'CHECKBOX',
+            title: 'Checkbox 1',
+            cb: function(state){
+              console.log(state);
+            }
+          },
+          {
+            type: 'ITEM',
+            title: 'Item 1',
+            cb: function(){
+              console.log('Item 1 cb');
+            }
+          },
+        ]
+      },
+    ]
+  },
+  {
+    type: 'EXPAND',
+    title: 'Expand 3',
+    cb: function(state){
+      console.log('Expand 3: '+state);
+    },
+    items: [
+      {
+        type: 'TABLE',
+        data: {
+          a: 1,
+          b: 2
+          'Item 44': 'Flygande bäckasiner söka hwila på mjuka tuvor qxz0123456789'
+        }
+      }
+    ]
+  },
+]);
+// .addCheckbox('Checkbox 1', true, function(state){
+//   console.log(state);
+// }).addCheckbox('Checkbox 1', false, function(state){
+//   console.log(state);
+// }).addItem('Item 1', function(){
+//   console.log(1);
+// }).addItem('Item 2', function(){
+//   console.log(2);
+// }).addItem('Item 3', function(){
+//   console.log(3);
+// }).addExpandPane('Expand', 
+//   .addCheckbox('Checkbox 1', true, function(state){
+//     console.log(state);
+//   }).addCheckbox('Checkbox 1', false, function(state){
+//     console.log(state);
+//   }).addItem('Item 1', function(){
+//     console.log(1);
+//   }).addItem('Item 2', function(){
+//     console.log(2);
+//   });
+// ]).addExpandPane('Expand', {
+//   'Item 1': 'str',
+//   'Item 222': 1,
+//   'Item 3': true,
+//   'Item 44': 'Flygande bäckasiner söka hwila på mjuka tuvor qxz0123456789'
+// }).addSelect('Select', {
+//   'key1': 'val1',
+//   'key2': 'val2',
+//   'key3': 'val3'
+// });
 
 alacarte.show();
 
