@@ -29,24 +29,43 @@
   cursor: pointer;
 }
 
-.alacarte ul {
-  /* list-style-type: none; */
-  padding 0px;
-  margin 0px;
-  /* margin-left: 20px; */
-}
-
-.alacarte .menu li .item {
-  padding: 0px 0px 0px 37px;
+.alacarte .menu .selectable {
   border-top: 1px solid #aaa;
 }
 
-.alacarte .menu .selected {
+.alacarte .menu .expandable {
+  display: none;
+}
+
+.alacarte .menu .expanded > .expandable {
+  display: block;
+}
+
+.alacarte .menu .table {  
+  font-size: 20px;
+}  
+
+.alacarte .menu .table td.key {  
+  white-space: nowrap;
+}  
+
+.alacarte .menu H3 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.alacarte .menu .selected > H3 {
   background: -webkit-linear-gradient(hsl(217, 96%, 71%), hsl(217, 96%, 43%));
   box-shadow: white 0px 0px 6px;
 }
 
-.alacarte .menu li span {  
+.alacarte .menu .children {
+  /* padding: 0px 0px 0px 37px; */
+}
+
+
+.alacarte .menu .checkbox {  
   padding: 0px;
   margin: 7px;
   width: 20px;  
@@ -58,7 +77,7 @@
   box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
 }  
 
-.alacarte .menu li span.checked:before {  
+.alacarte .menu .checked .checkbox:before {  
   content: "\2713";  
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  
   font-size: 23px;
@@ -71,20 +90,62 @@
   left: 0px;
 }  
 
-.alacarte .menu .icon {  
-  padding: 0px 5px;
-  position: absolute;  
-}  
-
-
-.alacarte .menu li table {  
-  font-size: 20px;
-}  
-
-.alacarte .menu li table td.key {  
-  white-space: nowrap;
-}  
-
-.alacarte .menu .hidden {  
-  display: none;
-}  
+/* .alacarte ul { */
+/*   /* list-style-type: none; */ */
+/*   padding 0px; */
+/*   margin 0px; */
+/*   /* margin-left: 20px; */ */
+/* } */
+/*  */
+/* .alacarte .menu li .item { */
+/*   padding: 0px 0px 0px 37px; */
+/*   border-top: 1px solid #aaa; */
+/* } */
+/*  */
+/* .alacarte .menu .selected { */
+/*   background: -webkit-linear-gradient(hsl(217, 96%, 71%), hsl(217, 96%, 43%)); */
+/*   box-shadow: white 0px 0px 6px; */
+/* } */
+/*  */
+/* .alacarte .menu li span {   */
+/*   padding: 0px; */
+/*   margin: 7px; */
+/*   width: 20px;   */
+/*   height: 20px;   */
+/*  */
+/*   position: absolute;   */
+/*   border-radius: 3px;  */
+/*   background-color: #aaa;   */
+/*   box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);   */
+/* }   */
+/*  */
+/* .alacarte .menu li span.checked:before {   */
+/*   content: "\2713";   */
+/*   text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);   */
+/*   font-size: 23px; */
+/*   color: #EEE; */
+/*   /* color: hsl(217, 96%, 71%); */ */
+/*   text-align: center; */
+/*   /* line-height: 20px; */ */
+/*   position: absolute; */
+/*   top: -5px; */
+/*   left: 0px; */
+/* }   */
+/*  */
+/* .alacarte .menu .icon {   */
+/*   padding: 0px 5px; */
+/*   position: absolute;   */
+/* }   */
+/*  */
+/*  */
+/* .alacarte .menu li table {   */
+/*   font-size: 20px; */
+/* }   */
+/*  */
+/* .alacarte .menu li table td.key {   */
+/*   white-space: nowrap; */
+/* }   */
+/*  */
+/* .alacarte .menu .hidden {   */
+/*   display: none; */
+/* }   */

@@ -60,6 +60,7 @@ alacarte.setHeader('Alacarte Demo')
           {
             type: 'CHECKBOX',
             title: 'Checkbox 1',
+            checked: true,
             cb: function(state){
               console.log(state);
             }
@@ -77,6 +78,30 @@ alacarte.setHeader('Alacarte Demo')
   },
   {
     type: 'EXPAND',
+    title: 'Expand 4',
+    cb: function(state){
+      console.log('Expand 3: '+state);
+    },
+    items: [
+      {
+        type: 'TABLE',
+        data: {
+          a: 1,
+          b: 2,
+          'Item 44': 'Flygande bäckasiner söka hwila på mjuka tuvor qxz0123456789'
+        }
+      },
+      {
+        type: 'ITEM',
+        title: 'Item 6',
+        cb: function(){
+          console.log('Item 6 cb');
+        }
+      },
+    ]
+  },
+  {
+    type: 'EXPAND',
     title: 'Expand 3',
     cb: function(state){
       console.log('Expand 3: '+state);
@@ -86,60 +111,34 @@ alacarte.setHeader('Alacarte Demo')
         type: 'TABLE',
         data: {
           a: 1,
-          b: 2
+          b: 2,
           'Item 44': 'Flygande bäckasiner söka hwila på mjuka tuvor qxz0123456789'
         }
       }
     ]
   },
 ]);
-// .addCheckbox('Checkbox 1', true, function(state){
-//   console.log(state);
-// }).addCheckbox('Checkbox 1', false, function(state){
-//   console.log(state);
-// }).addItem('Item 1', function(){
-//   console.log(1);
-// }).addItem('Item 2', function(){
-//   console.log(2);
-// }).addItem('Item 3', function(){
-//   console.log(3);
-// }).addExpandPane('Expand', 
-//   .addCheckbox('Checkbox 1', true, function(state){
-//     console.log(state);
-//   }).addCheckbox('Checkbox 1', false, function(state){
-//     console.log(state);
-//   }).addItem('Item 1', function(){
-//     console.log(1);
-//   }).addItem('Item 2', function(){
-//     console.log(2);
-//   });
-// ]).addExpandPane('Expand', {
-//   'Item 1': 'str',
-//   'Item 222': 1,
-//   'Item 3': true,
-//   'Item 44': 'Flygande bäckasiner söka hwila på mjuka tuvor qxz0123456789'
-// }).addSelect('Select', {
-//   'key1': 'val1',
-//   'key2': 'val2',
-//   'key3': 'val3'
-// });
 
 alacarte.show();
 
 //Navigate
 function key(code){
+  console.log(code);
   switch(code) {
   case 38: // UP
+  case 75: // k
     alacarte.up();
     break;
   case 40: // DOWN
+  case 74: // j
     alacarte.down();
     break;
   case 13: // ENTER
+  case 83: // s
     alacarte.enter();
     break;
   case 32: // Space
-    alacarte.enter();
+    alacarte.show();
     break;
   case 27: // Esc
     alacarte.hide();
