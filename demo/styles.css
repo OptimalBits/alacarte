@@ -1,0 +1,90 @@
+.alacarte {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  color: lightgray;
+  /* background: red; */
+  background: #444;
+  z-index: 300;
+
+  font: 200 25px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.alacarte .header {
+  background: #777;
+  padding: 0px 0px 0px 37px;
+}
+
+.alacarte .info {
+  font-size: 20px;
+  background: #777;
+  padding: 0px 0px 0px 37px;
+  margin: 0;
+}
+
+.alacarte .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.alacarte .menu li div {
+  padding: 0px 0px 0px 37px;
+  border-top: 1px solid #aaa;
+}
+
+.alacarte .menu li.selected div {
+  background: -webkit-linear-gradient(hsl(217, 96%, 71%), hsl(217, 96%, 43%));
+  box-shadow: white 0px 0px 6px;
+}
+
+.alacarte .menu li span {  
+  padding: 0px;
+  margin: 7px;
+  width: 20px;  
+  height: 20px;  
+
+  position: absolute;  
+  border-radius: 3px; 
+  background-color: #aaa;  
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}  
+
+.alacarte .menu li span.checked:before {  
+  content: "\2713";  
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  
+  font-size: 23px;
+  color: #EEE;
+  /* color: hsl(217, 96%, 71%); */
+  text-align: center;
+  /* line-height: 20px; */
+  position: absolute;
+  top: -5px;
+  left: 0px;
+}  
+
+.alacarte .menu .icon {  
+  content: "\2713";  
+  padding: 0px;
+  margin: 7px;
+  width: 20px;  
+  height: 20px;  
+
+  display: inline-block;
+
+  position: absolute;  
+}  
+
+.alacarte .menu li table {  
+  font-size: 20px;
+}  
+
+.alacarte .menu li table td.key {  
+  white-space: nowrap;
+}  
+
+.alacarte .menu .hidden {  
+  display: none;
+}  
