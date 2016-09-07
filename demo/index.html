@@ -117,6 +117,40 @@ alacarte.setHeader('Alacarte Demo')
       }
     ]
   },
+  {
+    type: 'EXPAND',
+    title: 'Select',
+    cb: function(val){
+      console.log('Expand 3: '+val);
+    },
+    items: [
+      {
+        type: 'RADIO',
+        title: 'R1',
+        value: 'VR1',
+        cb: function(val){
+          console.log('R1: '+val);
+        }
+      },
+      {
+        type: 'RADIO',
+        title: 'R2',
+        value: 'VR2',
+        checked: true,
+        cb: function(val){
+          console.log('R2: '+val);
+        }
+      },
+      {
+        type: 'RADIO',
+        title: 'R3',
+        value: 'VR3',
+        cb: function(val){
+          console.log('R3: '+val);
+        }
+      },
+    ]
+  },
 ]);
 
 alacarte.show();
