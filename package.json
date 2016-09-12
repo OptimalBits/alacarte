@@ -1,6 +1,6 @@
 {
   "name": "alacarte",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Simple menu for different devices",
   "main": "lib/alacarte.js",
   "scripts": {
